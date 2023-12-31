@@ -1,0 +1,60 @@
+<!-- equal height column layout -->
+<!-- magazine etc -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .wrapper {
+                margin: 0 auto;
+                padding: 1rem;
+                width: clamp(calc(320px - 3rem), 75%, 70ch);
+                border: 0.5rem solid black;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+
+        .block {
+            /* the item */
+            flex: 1 0 10ch; 
+            /* 
+            f-grow you can grow past 1 and auto take available space if in the situation
+            f-shrink cant grow less than 0  
+            f-basis mininum size of the item that everything is calculated from
+            */
+
+            padding: 0 1rem;
+            border: 0.5rem solid green;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header class="challenge-header">
+        <h1 class="challenge-title">01.04 Equal height wrapping columns</h1>
+    </header>
+
+    <section class="wrapper">
+        <div class="block">
+            <h2>Column 1</h2>
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto nemo suscipit aut facere ad eos sapiente architecto laborum pariatur sed fugit iste odio dolorem unde error dolores, velit ratione impedit</p>
+        </div>
+
+        <div class="block">
+            <h2>Column 2</h2>
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto nemo suscipit aut facere ad eos sapiente architecto laborum pariatur sed fugit iste odio dolorem unde error dolores, velit ratione impedit</p>
+        </div>
+
+        <div class="block">
+            <h2>Column 3</h2>
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto nemo suscipit aut facere ad eos sapiente architecto laborum pariatur sed fugit iste odio dolorem unde error dolores, velit ratione impedit</p>
+        </div>
+    </section>
+</body>
+</html>
